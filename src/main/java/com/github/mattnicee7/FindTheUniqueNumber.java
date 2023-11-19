@@ -27,6 +27,12 @@ public class FindTheUniqueNumber {
 
     private double precision = 0.0000000000001;
 
+    @Test
+    public void sampleTestCases() {
+        assertEquals(1.0, FindTheUniqueNumber.findUniq(new double[]{0, 1, 0}), precision);
+        assertEquals(2.0, FindTheUniqueNumber.findUniq(new double[]{1, 1, 1, 2, 1, 1}), precision);
+    }
+
     public static double findUniq(double arr[]) {
         final Map<Double, Integer> values = new HashMap<>();
 
@@ -45,12 +51,6 @@ public class FindTheUniqueNumber {
                 .findFirst()
                 .get()
                 .getKey();
-    }
-
-    @Test
-    public void sampleTestCases() {
-        assertEquals(1.0, FindTheUniqueNumber.findUniq(new double[]{0, 1, 0}), precision);
-        assertEquals(2.0, FindTheUniqueNumber.findUniq(new double[]{1, 1, 1, 2, 1, 1}), precision);
     }
 
 }

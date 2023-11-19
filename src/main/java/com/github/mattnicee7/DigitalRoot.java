@@ -26,6 +26,16 @@ Examples
 */
 public class DigitalRoot {
 
+    @Test
+    public void test1() {
+        assertEquals(7, DigitalRoot.digitalRoot(16));
+    }
+
+    @Test
+    public void test2() {
+        assertEquals(6, DigitalRoot.digitalRoot(456));
+    }
+
     public static int digitalRoot(int n) {
         char[] digits = String.valueOf(n).toCharArray();
 
@@ -42,17 +52,6 @@ public class DigitalRoot {
             total = digitalRoot(total);
 
         return total;
-    }
-
-
-    @Test
-    public void test1() {
-        assertEquals(7, DigitalRoot.digitalRoot(16));
-    }
-
-    @Test
-    public void test2() {
-        assertEquals(6, DigitalRoot.digitalRoot(456));
     }
 
 }
