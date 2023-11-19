@@ -28,6 +28,21 @@ Input: 123456789 Output: 987654321
 */
 public class DescendingOrder {
 
+    @Test
+    public void test_01() {
+        assertEquals(0, DescendingOrder.sortDesc(0));
+    }
+
+    @Test
+    public void test_02() {
+        assertEquals(51, DescendingOrder.sortDesc(15));
+    }
+
+    @Test
+    public void test_03() {
+        assertEquals(987654321, DescendingOrder.sortDesc(912345678));
+    }
+
     public static int sortDesc(final int num) {
         final String numString = String.valueOf(num);
 
@@ -44,21 +59,6 @@ public class DescendingOrder {
         }
 
         return Integer.parseInt(result.toString());
-    }
-
-    @Test
-    public void test_01() {
-        assertEquals(0, DescendingOrder.sortDesc(0));
-    }
-
-    @Test
-    public void test_02() {
-        assertEquals(51, DescendingOrder.sortDesc(15));
-    }
-
-    @Test
-    public void test_03() {
-        assertEquals(987654321, DescendingOrder.sortDesc(912345678));
     }
 
 }
